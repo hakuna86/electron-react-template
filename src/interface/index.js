@@ -1,13 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './App';
 
-class App extends Component {
-    render() {
-        return(
-            <div>
-                <h1>Hello electron react!!!!@@@@@</h1>
-            </div>
-        )
-    }
-}
-
-export default App;
+ReactDom.render(<App/>, document.getElementById("root"));

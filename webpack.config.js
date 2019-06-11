@@ -3,12 +3,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 
 module.exports = {
+    entry: './src/interface/index.js',
     output: {
 		path: path.resolve(__dirname, 'build'),
 		publicPath: './',
 		filename: 'bundle.js'
     },
-    target: 'electron-renderer',
     module : {
         rules:[
             {
@@ -41,7 +41,7 @@ module.exports = {
     },
     plugins : [
         new HtmlWebPackPlugin({
-            template : "./src/index.html",
+            template : "./src/interface/index.html",
             filename : "./index.html"
         }),
         new MiniCssExtractPlugin({
@@ -50,7 +50,7 @@ module.exports = {
         })
     ],
     devServer: {
-        contentBase: path.join(__dirname, 'build'),
+        publicPath:'http://localhost:9000',
         compress: true,
         port: 9000
     }

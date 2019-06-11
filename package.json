@@ -5,13 +5,13 @@
   "author": "hakuna",
   "license": "MIT",
   "private": true,
-  "main": "src/electron",
+  "main": "./src/electron",
   "scripts": {
     "start" : "nf start",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start:react": "MODE=dev webpack-dev-server --mode development",
-    "start:react-web": "MODE=dev webpack-dev-server --mode development --open",
+    "start:react-web": "webpack-dev-server --mode development --open",
     "start:electron": "MODE=dev electron .",
     "dist": "electron-builder",
     "build:win64": "build --win --x64"
