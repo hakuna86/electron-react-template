@@ -7,7 +7,8 @@ module.exports = {
 		path: path.resolve(__dirname, 'build'),
 		publicPath: './',
 		filename: 'bundle.js'
-	},
+    },
+    target: 'electron-renderer',
     module : {
         rules:[
             {
@@ -47,5 +48,10 @@ module.exports = {
             filename : "[name].css",
             chunkFilename : "[id].css"
         })
-    ]
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, 'build'),
+        compress: true,
+        port: 9000
+    }
 }

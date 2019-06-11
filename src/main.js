@@ -21,7 +21,7 @@ function createWindow() {
 	if (inDevelopmentMode)
 		mainWindow.webContents.openDevTools()
 	// Load primary UI
-	mainWindow.loadURL(inDevelopmentMode ? `http://localhost:8080` : `file://${__dirname}/build/index.html`);
+	mainWindow.loadURL(inDevelopmentMode ? `http://localhost:9000` : `file://${__dirname}/build/index.html`);
 	// Handle 'closed' window event
 	mainWindow.on('closed', () => {
 		if (process.platform !== 'darwin') app.quit();
